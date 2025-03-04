@@ -130,26 +130,6 @@ function checkLetter(){
     }
 
 }
-
-// Heart confetti effect
-function triggerHeartConfetti() {
-    const duration = 5 * 1000;
-    const end = Date.now() + duration;
-
-    (function frame() {
-        confetti({
-            particleCount: 50,
-            spread: 70,
-            colors: ['#ff69b4', '#ff0000', '#ffc0cb'],
-            origin: { x: Math.random(), y: Math.random() - 0.2 }
-        });
-        
-        if (Date.now() < end) {
-            requestAnimationFrame(frame);
-        }
-    })();
-}
-
 // Initial game setup call
 setupGame();
 
